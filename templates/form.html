@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %} Madlibs form{% endblock%}
+
+{% block content %}
+<h1>Madlib Game</h1>
+<form action="/story">
+        <p>
+          <label for="place">Place:</label>
+          <input type="text" name="place" id="place" placeholder="enter place" required>
+        </p>
+        <p>
+          <label for="noun">Noun:</label>
+          <input type="text" name="noun" id="noun" placeholder="enter noun"  minlength=3 required>
+        </p>
+        <p>
+          <label for="verb">Verb:</label>
+          <input type="text" name="verb" id="verb" placeholder="enter verb" required>
+        </p>
+        <p>
+          <label for="adjective">Adjective:</label>
+          <input type="text" name="adjective" id="adjective" placeholder="enter adjective"  minlength=3 required>
+        </p>
+        <p>
+          <label for="plural">Plural_noun:</label>
+          <input type="text" name="plural" id="plural" placeholder="enter plural noun"  minlength=3 required>
+        </p>
+        <p>
+          <button onclick="valid_data()">Submit</button>
+        </p>  
+      </form>
+{% endblock %}      
